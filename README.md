@@ -32,20 +32,6 @@ $ docker-compose exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 
 ![Start the setup wizard by entering the intial admin password](images/jenkins-unlock.png)
 
-6. Choose `Install suggested plugins`
-
-![Jenkins Install Options](images/jenkins-install.png)
-
-![Jenkins is Installing](images/jenkins-setup.png)
-
-7. Enter your admin user details and click `Save and Finish`
-
-![Jenkins Admin User Setup](images/jenkins-admin-user.png)
-
-8. Click `Open Blue Ocean` from the left hand menu
-
-![Blue Ocean](images/jenkins-blue-ocean.png)
-
 > Congratulations! You may now use Jenkins with the Blue Ocean UI and the Jenkins Pipelines of 2.0
 
 ## Troubleshooting

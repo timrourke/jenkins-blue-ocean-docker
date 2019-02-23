@@ -1,0 +1,11 @@
+jenkins:
+  systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code Plugin\n\n"
+
+unclassified:
+  location:
+    adminAddress: ${JENKINS_LOCATION_ADMIN_ADDRESS}
+    url: ${JENKINS_LOCATION_URL}
+
+plugins:
+  required:
+    github-branch-source: latest
