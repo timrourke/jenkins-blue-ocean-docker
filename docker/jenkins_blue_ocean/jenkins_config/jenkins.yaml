@@ -1,5 +1,11 @@
 jenkins:
   systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code Plugin\n\n"
+  clouds:
+    - docker:
+        name: "docker"
+        dockerApi:
+          dockerHost:
+            uri: "unix:///var/run/docker.sock"
 
 unclassified:
   location:
