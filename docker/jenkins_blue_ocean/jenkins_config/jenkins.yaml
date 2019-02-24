@@ -6,6 +6,3 @@ unclassified:
     adminAddress: ${JENKINS_LOCATION_ADMIN_ADDRESS}
     url: ${JENKINS_LOCATION_URL}
 
-plugins:
-  required:
-    github-branch-source: 1.5
