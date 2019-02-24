@@ -1,6 +1,10 @@
 version: '2'
 services:
   jenkins:
+      # Running a Docker process as root is not safe, but Jenkins requires it
+      # to provide permissions to the Docker socket
+      # See: https://jenkins.io/doc/book/installing/
+      user: root
     build:
       context: ./docker/jenkins_blue_ocean
     ports:
@@ -9,6 +13,10 @@ services:
     volumes:
       - 'jenkins_data:/var/jenkins_home'
       - ./docker/jenkins_blue_ocean/jenkins_config:/var/jenkins_home/casc_configs
+      # Exposing the Docker socket to the container is not safe, but Jenkins
+      # requires it as a way to execute Docker commands during CI builds. :(
+      # See: https://jenkins.io/doc/book/installing/
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - 'JENKINS_OPTS=--httpPort=8080 --httpsPort=8443'
       - JENKINS_LOCATION_ADMIN_ADDRESS=$JENKINS_LOCATION_ADMIN_ADDRESS
