@@ -8,4 +8,4 @@ unclassified:
 
 plugins:
   required:
-    github-branch-source: latest
+    github-branch-source: 1.5
