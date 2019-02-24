@@ -1,7 +1,7 @@
 version: '2'
 services:
   jenkins:
-      user: root
+    user: root
     build:
       context: ./docker/jenkins_blue_ocean
     ports:
